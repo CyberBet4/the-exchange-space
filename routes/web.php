@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,12 +23,9 @@ Route::get('/login', function () {
     return view('unauth.pages.login');
 });
 
-Route::get('/register', function () {
-    return view('unauth.pages.register');
-});
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'store']);
 
 
 // AUTHENTICATED ROUTES
-Route::get('/dashboard', function () {
-    return view('pages.dashboard');
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
