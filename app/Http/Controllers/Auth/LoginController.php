@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
+
     // show login form
     public function showLoginForm()
     {

@@ -51,7 +51,7 @@
             
             <div class="mt-2">
               <div class="border-bottom">
-                <button class="btn btn-block btn-lg btn-gradient-secondary" style="width: 100%;">- Withdraw   </button>
+                <button type="button" data-toggle="modal"  data-target="#withdrawmodal" class="btn btn-block btn-lg btn-gradient-secondary" style="width: 100%;">- Withdraw   </button>
               </div>
             </div>
           </span>

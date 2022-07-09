@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\WithdrawController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +29,10 @@ Route::post('/login', [LoginController::class, 'authUser']);
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
-
 
 // AUTHENTICATED ROUTES
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+
+Route::post('/dashboard/withdraw', [WithdrawController::class, 'withdraw'])->name('withdraw');

@@ -1,12 +1,26 @@
 @extends('layouts.app')
-{{-- @include('layouts.header') --}}
+@include('layouts.withdrawmodal')
 
 @section('content')
+
     <!-- partial -->
     <div class="main-panel">
         <div class="content-wrapper">
+          
+          @if(session()->has('success'))
+              <div class="alert alert-success">
+                  {{ session()->get('success') }}
+              </div>
+              @elseif(session()->has('error'))
+                <div class="alert alert-danger">
+                  {{ session()->get('error') }}
+              </div>
+          @endif
+
           <div class="page-header">
+           
             <h3 class="page-title">
+              
               <span class="page-title-icon bg-gradient-primary text-white me-2">
                 <i class="mdi mdi-home"></i>
               </span> Dashboard
@@ -27,7 +41,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">TRX <i class="mdi mdi-chart-line mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">$0.00</h2>
+                  <h2 class="mb-5">${{ auth()->user()->trx }}</h2>
                   {{-- <h6 class="card-text">Increased by 60%</h6> --}}
                 </div>
               </div>
@@ -38,7 +52,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">FWT <i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">$0.00</h2>
+                  <h2 class="mb-5">${{ auth()->user()->fwt }}</h2>
                   {{-- <h6 class="card-text">Decreased by 10%</h6> --}}
                 </div>
               </div>
@@ -49,7 +63,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">TPC <i class="mdi mdi-diamond mdi-24px float-right"></i>
                   </h4>
-                  <h2 class="mb-5">$0.00</h2>
+                  <h2 class="mb-5">${{ auth()->user()->tpc }}</h2>
                   {{-- <h6 class="card-text">Increased by 5%</h6> --}}
                 </div>
               </div>

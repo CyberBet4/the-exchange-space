@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['guest']);
+    }
+
     //show registration form
     public function showRegistrationForm()
     {
@@ -34,18 +40,12 @@ class RegisterController extends Controller
         ]);
 
         //create a new user
-        // $user = new User;
         User::create([
             'name' => $request->name,
             'address' => $request->address,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        // $user->name = $request->name;
-        // $user->address = $request->address;
-        // $user->email = $request->email;
-        // $user->password = bcrypt($request->password);
-        // $user->save();
 
         //login user
         auth()->attempt($request->only(['email', 'password']));

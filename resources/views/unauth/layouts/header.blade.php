@@ -59,8 +59,12 @@
 
       @auth
       <div class="d-flex">
-        <a href={{route('dashboard')}} class="get-started-btn scrollto mr-3">Username</a>
-        <a href={{url('/logout')}} class="get-started-btn scrollto ">Logout</a>
+        <a href={{route('dashboard')}} class="get-started-btn scrollto mr-3"> <i class="mdi mdi-profile"></i> {{ auth()->user()->name }}</a>
+        <form action={{ route("logout")}} method="post">
+          @csrf
+          <button type="submit" class="get-started-btn scrollto ">Logout</button>
+        </form>
+        
       </div>
 
       @endauth
