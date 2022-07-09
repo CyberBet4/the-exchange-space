@@ -25,8 +25,14 @@
           <div class="col-12 d-flex" style="justify-content: center;">
             <div style="max-width: 1000px;">
               <h2 class="text-center mb-5">Login to you Account</h2>
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                
+              <form action={{route('login')}} method="post" role="form" class="php-email-form">
+                @csrf
+                @error('email')
+                <div class="alert alert-danger">
+                  {{ $message }}
+                </div>
+                  
+                @enderror
                 <div class="form-group mt-3">
                   <input type="text" class="form-control" name="email" placeholder="Email Address" required>
                 </div>

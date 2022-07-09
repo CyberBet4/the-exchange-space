@@ -57,10 +57,20 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      @auth
       <div class="d-flex">
-        <a href={{url('/login')}} class="get-started-btn scrollto mr-3">Login</a>
-        <a href={{url('/register')}} class="get-started-btn scrollto ">Sign up</a>
+        <a href={{route('dashboard')}} class="get-started-btn scrollto mr-3">Username</a>
+        <a href={{url('/logout')}} class="get-started-btn scrollto ">Logout</a>
       </div>
+
+      @endauth
+
+      @guest
+        <div class="d-flex">
+          <a href={{route('login')}} class="get-started-btn scrollto mr-3">Login</a>
+          <a href={{route('register')}} class="get-started-btn scrollto ">Sign up</a>
+        </div>      
+      @endguest
       
 
     </div>
