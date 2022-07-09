@@ -47,7 +47,7 @@
             <div class="border-bottom">
               <h6 class="font-weight-normal mb-3">Wallet</h6>
             </div>
-            <button class="btn btn-block btn-lg btn-gradient-primary mt-4" style="width: 100%;">+ Fund Swap</button>
+            <button type="button" data-toggle="modal" data-target="#fundmodal" class="btn btn-block btn-lg btn-gradient-primary mt-4" style="width: 100%;">+ Fund Swap</button>
             
             <div class="mt-2">
               <div class="border-bottom">

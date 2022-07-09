@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@include('layouts.withdrawmodal')
+@include('layouts.components.withdrawmodal')
+@include('layouts.components.fundmodal')
 
 @section('content')
 
