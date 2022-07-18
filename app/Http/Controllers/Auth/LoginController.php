@@ -28,7 +28,11 @@ class LoginController extends Controller
         ]);
 
         if (auth()->attempt($request->only(['email', 'password']))) {
-            return redirect()->route('dashboard');
+            if(auth()->user()->is_admin) {
+                return redirect()->route('user-list');
+            } else {
+                return redirect()->route('dashboard');
+            }
         }
 
         return redirect()->back()->withErrors([

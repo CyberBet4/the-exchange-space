@@ -3,6 +3,16 @@
 </div>
 
 </div>
+
+<script>
+    let txt = document.getElementsByClassName("address");
+    for(let x = 0; x < txt.length; x++) {
+            txt[x].textContent = txt[x].textContent.substring(0, 11);
+            txt[x].textContent.length >= 11 ? txt[x].textContent = txt[x].textContent + '...' : 
+            txt[x].textContent;
+    }
+   
+</script>
 {{-- bootstrap --}}
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

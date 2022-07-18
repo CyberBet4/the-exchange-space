@@ -2010,6 +2010,11 @@ button {
 button:focus:not(:focus-visible) {
   outline: 0; }
 
+  button.card.active {
+    border: 2px solid var(--bs-primary) !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
 input,
 button,
 select,

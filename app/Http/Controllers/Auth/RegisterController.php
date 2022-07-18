@@ -45,6 +45,7 @@ class RegisterController extends Controller
             'address' => $request->address,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'is_admin' => 0,
         ]);
 
         //login user

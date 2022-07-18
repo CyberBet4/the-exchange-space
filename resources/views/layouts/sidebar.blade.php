@@ -4,17 +4,17 @@
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" href={{ route("dashboard")}}>
             <span class="menu-title">Dashboard</span>
             <i class="mdi mdi-home menu-icon"></i>
           </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link" href="#">
             <span class="menu-title">Start Swap</span>
             <i class="mdi mdi-swap-horizontal menu-icon"></i>
           </a>
-        </li>
+        </li> --}}
 
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

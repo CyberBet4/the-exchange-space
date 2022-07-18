@@ -25,7 +25,7 @@ class WithdrawController extends Controller
             // save the user's new account balance
             auth()->user()->save();
             // return a success message
-            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 2 hours.");
+            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 5 mins.");
         } 
         else if($wallet === "fwt" && $fwt > $amount){
             // subtract the amount from the user's account balance
@@ -33,15 +33,15 @@ class WithdrawController extends Controller
             // save the user's new account balance
             auth()->user()->save();
             // return a success message
-            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 2 hours.");
+            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 5 mins.");
         } 
-        else if($wallet === "tpc" && $trx > $amount){
+        else if($wallet === "tpc" && $tpc > $amount){
             // subtract the amount from the user's account balance
             auth()->user()->tpc -= $amount;
             // save the user's new account balance
             auth()->user()->save();
             // return a success message
-            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 2 hours.");
+            return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 5 mins.");
         }
         
         else {

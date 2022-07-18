@@ -16,6 +16,10 @@
                 <div class="alert alert-danger">
                   {{ session()->get('error') }}
               </div>
+              @elseif(session()->has('message'))
+                <div class="alert alert-info">
+                  {{ session()->get('message') }}
+              </div>
           @endif
 
           <div class="page-header">
@@ -78,7 +82,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">Active Swaps
                   </h4>
-                  <h2 class="mb-5">0</h2>
+                  <h2 class="mb-5">{{auth()->user()->active_swap}}</h2>
                   {{-- <h6 class="card-text">Increased by 60%</h6> --}}
                 </div>
               </div>
@@ -89,7 +93,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">Completed Swaps 
                   </h4>
-                  <h2 class="mb-5">0</h2>
+                  <h2 class="mb-5">{{ auth()->user()->completed_swap }}</h2>
                   {{-- <h6 class="card-text">Decreased by 10%</h6> --}}
                 </div>
               </div>
@@ -100,7 +104,7 @@
                   <img src={{ asset("/images/dashboard/circle.svg")}} class="card-img-absolute" alt="circle-image" />
                   <h4 class="font-weight-normal mb-3">Total Swaps
                   </h4>
-                  <h2 class="mb-5">0</h2>
+                  <h2 class="mb-5">{{ auth()->user()->active_swap + auth()->user()->completed_swap }} </h2>
                   {{-- <h6 class="card-text">Increased by 5%</h6> --}}
                 </div>
               </div>

@@ -6,6 +6,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\WithdrawController;
+use App\Http\Controllers\FundController;
+use App\Http\Controllers\UserlistController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +36,11 @@ Route::post('/register', [RegisterController::class, 'store']);
 // AUTHENTICATED ROUTES
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+Route::get('/dashboard/user-list', [UserlistController::class, 'index'])->name('user-list');
+Route::post('/dashboard/user-list', [UserlistController::class, 'update']);
+Route::delete('/dashboard/user-delete/{id}', [UserlistController::class, 'destroy'])->name('user-delete');
+
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::post('/dashboard/withdraw', [WithdrawController::class, 'withdraw'])->name('withdraw');
+Route::post('/dashboard/fund', [FundController::class, 'deposit'])->name('deposit');
