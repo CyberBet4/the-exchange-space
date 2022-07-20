@@ -20,8 +20,13 @@
             </div>
           </a>
           <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-            <a class="dropdown-item" href="#">
+            @if(strpos($_SERVER['REQUEST_URI'],'profile') !== false)
+            <a class="dropdown-item disabled" href={{ route("profile")}}>
               <i class="mdi mdi-settings me-2 text-success"></i> Account Settings </a>
+              @else
+              <a class="dropdown-item" href={{ route("profile")}}>
+                <i class="mdi mdi-settings me-2 text-success"></i> Account Settings </a>
+              @endif
             <div class="dropdown-divider"></div>
             <form action={{ route("logout")}} method="post">
               @csrf

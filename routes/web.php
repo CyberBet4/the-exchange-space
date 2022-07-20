@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\FundController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserlistController;
+use App\Http\Controllers\WithdrawController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
-use App\Http\Controllers\WithdrawController;
-use App\Http\Controllers\FundController;
-use App\Http\Controllers\UserlistController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,6 @@ Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::post('/dashboard/withdraw', [WithdrawController::class, 'withdraw'])->name('withdraw');
 Route::post('/dashboard/fund', [FundController::class, 'deposit'])->name('deposit');
+
+Route::get('/dashboard/profile', [ProfileController::class, 'index'])->name('profile');
+Route::post('/dashboard/profile', [ProfileController::class, 'updateProfile']);
