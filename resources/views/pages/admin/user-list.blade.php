@@ -38,15 +38,17 @@
                                     <td> {{$user->name}} </td>
                                     <td> {{$user->email}} </td>
                                     <td class="address"> {{$user->address}} </td> 
-                                    <td class="d-flex" style="justify-content: space-around"> 
-                                        <a href={{ url("/dashboard/user-list", $user)}} class="btn btn-inverse-dark btn-sm">View</a> 
+                                    <td class="d-flex"> 
+                                        <a href={{ url("/dashboard/user-list", $user)}} class="btn btn-inverse-dark btn-sm mr-3">
+                                         <i class="mdi mdi-eye mr-2"></i> View</a> 
                                     {{-- </form> --}}
                                     @if ($user->id != auth()->user()->id)
                                         <form action={{ url("/dashboard/user-delete", $user)}} method="post">
                                             @csrf
                                             @method('delete')
                                             <input type="hidden" name="id" value={{ $user->id }}>
-                                            <button type="submit" onclick="deleteUser()" class="btn btn-danger btn-sm">Delete</button>
+                                            <button type="submit" onclick="deleteUser()" class="btn btn-danger btn-sm">
+                                              <i class="mdi mdi-cancel mr-2"></i> Delete</button>
                                             <script>
                                                 function deleteUser() {
                                                     return confirm("Are you sure you want to delete this user?");

@@ -19,7 +19,7 @@ class DashboardController extends Controller
         $wallets = json_decode('[
             {
                 "coin": "BNB",
-                "balance": '.auth()->user->bnb.'
+                "balance": '.auth()->user()->bnb.'
             },
             {
                 "coin": "XRP",
