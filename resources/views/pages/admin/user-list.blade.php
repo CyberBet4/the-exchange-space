@@ -23,29 +23,24 @@
                     <table class="table table-striped">
                       <thead>
                         <tr>
-                          <th> First name </th>
+                          <th> Full name </th>
+                          <th> Email </th>
                           <th> Address </th>
-                          <th> trx </th>
-                          <th> fwt </th>
-                          <th> tpc </th>
                           <th> Actions </th>
                         </tr>
                       </thead>
                       
                       <tbody> 
                         @foreach ($users as $user)
-                            <form action={{ route("user-list")}} method="post">
-                                @csrf
-                                <input type="hidden" name="id" value={{ $user->id }}>
+                            {{-- <form action={{ route("user-list")}} method="post">
+                                @csrf --}}
                                 <tr>
                                     <td> {{$user->name}} </td>
+                                    <td> {{$user->email}} </td>
                                     <td class="address"> {{$user->address}} </td> 
-                                    <td> <input type="number" class="form-control" name="trx" value={{$user->trx}}> </td>
-                                    <td> <input type="number" class="form-control" name="fwt" value={{$user->fwt}}> </td>
-                                    <td> <input type="number" class="form-control" name="tpc" value={{$user->tpc}}> </td>
-                                    <td> 
-                                        <button type="submit" class="btn btn-inverse-dark btn-sm">Update</button> 
-                                    </form>
+                                    <td class="d-flex" style="justify-content: space-around"> 
+                                        <a href={{ url("/dashboard/user-list", $user)}} class="btn btn-inverse-dark btn-sm">View</a> 
+                                    {{-- </form> --}}
                                     @if ($user->id != auth()->user()->id)
                                         <form action={{ url("/dashboard/user-delete", $user)}} method="post">
                                             @csrf
@@ -57,7 +52,7 @@
                                                     return confirm("Are you sure you want to delete this user?");
                                                 }
                                             </script>
-                                        </form>
+                                        {{-- </form> --}}
                                         @endif
                                     </td>
                                 </tr>

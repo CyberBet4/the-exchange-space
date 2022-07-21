@@ -39,6 +39,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('/dashboard/user-list', [UserlistController::class, 'index'])->name('user-list');
 Route::post('/dashboard/user-list', [UserlistController::class, 'update']);
+Route::get('/dashboard/user-list/{id}', [UserlistController::class, 'get_singleuser']);
 Route::delete('/dashboard/user-delete/{id}', [UserlistController::class, 'destroy'])->name('user-delete');
 
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
