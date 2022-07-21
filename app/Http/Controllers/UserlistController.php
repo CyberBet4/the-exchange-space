@@ -25,14 +25,49 @@ class UserlistController extends Controller
     public function update(Request $request)
     {
         $user = User::find($request->id);
-        $user->trx = $request->trx;
-        $user->fwt = $request->fwt;
-        $user->tpc = $request->tpc;
+        $user->bnb = $request->bnb;
+        $user->xrp = $request->xrp;
+        $user->ada = $request->ada;
+        $user->brise = $request->brise;
+        $user->move = $request->move;
+        $user->usdt = $request->usdt;
+        $user->qmall_bep20 = $request->qmall_bep20;
+        $user->qmall_erc20 = $request->qmall_erc20;
+        $user->gmt_bep20 = $request->gmt_bep20;
+        $user->gmt_spl = $request->gmt_spl;
+        $user->glbd = $request->glbd;
+        $user->dreamn = $request->dreamn;
+        $user->btc = $request->btc;
+        $user->lstar = $request->lstar;
+        $user->ocean = $request->ocean;
+        $user->stmx = $request->stmx;
+        $user->rht = $request->rht;
+        $user->r1 = $request->r1;
+        $user->cvxcrv = $request->cvxcrv;
+        $user->metaufo = $request->metaufo; 
+        $user->bid = $request->bid;
+        $user->fex = $request->fex;
+        $user->slc = $request->slc;
+        $user->rbx_erc20 = $request->rbx_erc20;
+        $user->dka_erc20 = $request->dka_erc20;
+        $user->sol = $request->sol;
+        $user->vst_erc20 = $request->vst_erc20;
+        $user->hzm = $request->hzm;
+        $user->luna = $request->luna;
+        $user->waves = $request->waves;
+        $user->prch_bsc = $request->prch_bsc;
+        $user->arv_erc20 = $request->arv_erc20;
+        $user->shib_bep20 = $request->shib_bep20;
+        $user->usdc_erc20 = $request->usdc_erc20;
+        $user->huh_erc20 = $request->huh_erc20;
+        $user->huh_bep20 = $request->huh_bep20;
+
+        // increase completed swaps value
         $user->completed_swap = $user->completed_swap + 1;
         if($user->save()){
-            return redirect()->route('user-list')->with('success', 'User updated successfully');
+            return redirect('dashboard/user-list/'.$request->id)->with('success', 'User updated successfully');
         }else{
-            return redirect()->route('user-list')->with('error', 'User update failed');
+            return redirect('dashboard/user-list'.$request->id)->with('error', 'User update failed');
         }
     }
 
@@ -52,147 +87,183 @@ class UserlistController extends Controller
         $wallets = json_decode('[
             {
                 "coin": "BNB",
-                "balance": '.$user->bnb.'
+                "balance": '.$user->bnb.',
+                "name": "bnb"
             },
             {
                 "coin": "XRP",
-                "balance": '.$user->xrp.'
+                "balance": '.$user->xrp.',
+                "name": "xrp"
             },
             {
                 "coin": "Cardano ADA ",
-                "balance": '.$user->ada.'
+                "balance": '.$user->ada.',
+                "name": "ada"
             },
             {
                 "coin": "BRISE Bitgert",
-                "balance": '.$user->brise.'
+                "balance": '.$user->brise.',
+                "name": "brise"
             },
             {
                 "coin": "Move BEP20 movez",
-                "balance": '.$user->move.'
+                "balance": '.$user->move.',
+                "name": "move"
             },
             {
                 "coin": "TETHER USDT",
-                "balance": '.$user->usdt.'
+                "balance": '.$user->usdt.',
+                "name": "usdt"
             },
             {
                 "coin": "Qmall BEP20",
-                "balance": '.$user->qmall_bep20.'
+                "balance": '.$user->qmall_bep20.',
+                "name": "qmall_bep20"
             },
             {
                 "coin": "Qmall ERC20",
-                "balance": '.$user->qmall_erc20.'
+                "balance": '.$user->qmall_erc20.',
+                "name": "qmall_erc20"
             },
             {
                 "coin": "GMT BEP20",
-                "balance": '.$user->gmt_bep20.'
+                "balance": '.$user->gmt_bep20.',
+                "name": "gmt_bep20"
             },
             {
                 "coin": "GMT SPL",
-                "balance": '.$user->gmt_spl.'
+                "balance": '.$user->gmt_spl.',
+                "name": "gmt_spl"
             },
             {
                 "coin": "GLBD",
-                "balance": '.$user->glbd.'
+                "balance": '.$user->glbd.',
+                "name": "glbd"
             },
             {
                 "coin": "DREAMN",
-                "balance": '.$user->dreamn.'
+                "balance": '.$user->dreamn.',
+                "name": "dreamn"
             },
             {
                 "coin": "BTC",
-                "balance": '.$user->btc.'
+                "balance": '.$user->btc.',
+                "name": "btc"
             },
             {
                 "coin": "LSTAR",
-                "balance": '.$user->lstar.'
+                "balance": '.$user->lstar.',
+                "name": "lstar"
             },
             {
                 "coin": "OCEAN",
-                "balance": '.$user->ocean.'
+                "balance": '.$user->ocean.',
+                "name": "ocean"
             },
             {
                 "coin": "STMX",
-                "balance": '.$user->stmx.'
+                "balance": '.$user->stmx.',
+                "name": "stmx"
             },
             {
                 "coin": "RHT",
-                "balance": '.$user->rht.'
+                "balance": '.$user->rht.',
+                "name": "rht"
             },
             {
                 "coin": "R1",
-                "balance": '.$user->r1.'
+                "balance": '.$user->r1.',
+                "name": "r1"
             },
             {
                 "coin": "CVXCRV",
-                "balance": '.$user->cvxcrv.'
+                "balance": '.$user->cvxcrv.',
+                "name": "cvxcrv"
             },
             {
                 "coin": "MetaUFO",
-                "balance": '.$user->metaufo.'
+                "balance": '.$user->metaufo.',
+                "name": "metaufo"
             },
             {
                 "coin": "BID",
-                "balance": '.$user->bid.'
+                "balance": '.$user->bid.',
+                "name": "bid"
             },
             {
                 "coin": "FEX",
-                "balance": '.$user->fex.'
+                "balance": '.$user->fex.',
+                "name": "fex"
             },
             {
                 "coin": "SLC",
-                "balance": '.$user->slc.'
+                "balance": '.$user->slc.',
+                "name": "slc"
             },
             {
                 "coin": "RBX",
-                "balance": '.$user->rbx_erc20.'
+                "balance": '.$user->rbx_erc20.',
+                "name": "rbx_erc20"
             },
             {
                 "coin": "DKA",
-                "balance": '.$user->dka_erc20.'
+                "balance": '.$user->dka_erc20.',
+                "name": "dka_erc20"
             },
             {
                 "coin": "SOL NFT",
-                "balance": '.$user->sol.'
+                "balance": '.$user->sol.',
+                "name": "sol"
             },
             {
                 "coin": "VST",
-                "balance": '.$user->vst_erc20.'
+                "balance": '.$user->vst_erc20.',
+                "name": "vst_erc20"
             },
             {
                 "coin": "HZM",
-                "balance": '.$user->hzm.'
+                "balance": '.$user->hzm.',
+                "name": "hzm"
             },
             {
                 "coin": "LUNA",
-                "balance": '.$user->luna.'
+                "balance": '.$user->luna.',
+                "name": "luna"
             },
             {
                 "coin": "WAVES",
-                "balance": '.$user->waves.'
+                "balance": '.$user->waves.',
+                "name": "waves"
             },
             {
                 "coin": "PRCH",
-                "balance": '.$user->prch_bsc.'
+                "balance": '.$user->prch_bsc.',
+                "name": "prch_bsc"
             },
             {
                 "coin": "ARV ERC20",
-                "balance": '.$user->arv_erc20.'
+                "balance": '.$user->arv_erc20.',
+                "name": "arv_erc20"
             },
             {
                 "coin": "SHIB BEP20",
-                "balance": '.$user->shib_bep20.'
+                "balance": '.$user->shib_bep20.',
+                "name": "shib_bep20"
             },
             {
                 "coin": "USDC ERC20",
-                "balance": '.$user->usdc_erc20.'
+                "balance": '.$user->usdc_erc20.',
+                "name": "usdc_erc20"
             },
             {
                 "coin": "HUH ERC20",
-                "balance": '.$user->huh_erc20.'
+                "balance": '.$user->huh_erc20.',
+                "name": "huh_erc20"
             },
             {
                 "coin": "HUH BEP20",
-                "balance": '.$user->huh_bep20.'
+                "balance": '.$user->huh_bep20.',
+                "name": "huh_bep20"
             }
             
         ]');

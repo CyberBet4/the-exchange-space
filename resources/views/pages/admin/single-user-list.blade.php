@@ -51,19 +51,21 @@
                         @foreach($wallets as $wallet)
                         <div class="form-group col-md-3">
                           <label>{{$wallet->coin}}</label>
-                          <input type="number" class="form-control" name="coin-name" value={{$wallet->balance}}>
+                          <input type="number" class="form-control" name={{$wallet->name}} value={{$wallet->balance}}>
                         </div>
                         @endforeach
                       </div>
             
-                      <div class="d-flex">
-                        <button type="submit" class="btn btn-gradient-dark me-2 mr-4">Update</button>
+                      <div class="d-flex" style="justify-content: space-between;">
+                        <button type="submit" class="btn btn-dark me-2 mr-4">
+                           <i class="mdi mdi-check mr-2"></i> Update</button>
+                    </form>
                         @if ($user->id != auth()->user()->id)
                         <form action={{ url("/dashboard/user-delete", $user)}} method="post">
                             @csrf
                             @method('delete')
                             <input type="hidden" name="id" value={{ $user->id }}>
-                            <button type="submit" onclick="deleteUser()" class="btn btn-danger btn-sm">
+                            <button type="submit" onclick="deleteUser()" class="btn btn-inverse-danger">
                                 <i class="mdi mdi-cancel mr-2"></i>
                                 Delete User</button>
                             <script>
@@ -74,7 +76,7 @@
                         {{-- </form> --}}
                         @endif
                       </div>
-                    </form>
+                    
                   </div>
                 </div>
             </div>
