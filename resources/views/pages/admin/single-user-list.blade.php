@@ -51,10 +51,14 @@
                         @foreach($wallets as $wallet)
                         <div class="form-group col-md-3">
                           <label>{{$wallet->coin}}</label>
-                          <input type="number" class="form-control" name={{$wallet->name}} value={{$wallet->balance}}>
+                          <input type="number" id="wallet" class="form-control" name={{$wallet->name}} value={{$wallet->balance}}>
+                          
                         </div>
                         @endforeach
                       </div>
+
+                      <input type="hidden" id="alteredwallet" name="alteredwallet" value="">
+                        <input type="hidden" id="alteredamount" name="alteredamount" value="">
             
                       <div class="d-flex" style="justify-content: space-between;">
                         <button type="submit" class="btn btn-dark me-2 mr-4">
@@ -82,4 +86,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+      const input = document.querySelector("input");
+      input.addEventListener('change', getInfo());
+
+      function getInfo(){
+        document.getElementById("alteredamount").value = document.getElementById("wallet").value;
+        // get name attribute of input field
+        document.getElementById("alteredwallet").value  = document.getElementById("wallet").getAttribute("name");
+      }
+    </script>
 @endsection

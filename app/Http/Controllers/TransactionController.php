@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class ProfileController extends Controller
+class TransactionController extends Controller
 {
-    // open profile page
+    // open transaction page
     public function index()
     {
         // array of wallet
@@ -196,30 +197,10 @@ class ProfileController extends Controller
             
         ]');
 
-        return view('pages.profile')->with('wallets', $wallets);
-    }
+        // get transaction history
+        $transactions = DB::table('transactions')->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->get();
 
-    public function updateProfile(Request $request)
-    {
-        // dd($request->all());
-        // validate form data
-        // $this->validate($request, [
-        //     // 'address' => 'required|string',
-        // ]);
-        
-        $user = auth()->user();
-        $user->address = $request->address;
-        
-        if ($request->password != null) {
-            $user->password = bcrypt($request->password);
-        }
-
-        if($user->save()){
-            return redirect()->route('profile')->with('success', 'Profile updated successfully');
-        }else{
-            return redirect()->route('profile')->with('error', 'Profile update failed');
-        }
-        
-        // return back()->with('success', 'Profile updated successfully');
+        // dd($transactions);
+        return view('pages.transactions')->with('wallets', $wallets)->with('transactions', $transactions);
     }
 }

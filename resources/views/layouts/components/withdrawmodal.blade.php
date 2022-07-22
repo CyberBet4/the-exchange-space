@@ -23,16 +23,16 @@
                 <div class="form-group mb-3">
                     <label for="amount">Wallet Type</label> 
                     <select id="inner-wallet" class="form-control">
-                      @foreach($wallets as $wallet)
+                      @foreach($wallets  as $wallet)
                       <option id={{$wallet->name}} value={{$wallet->balance}}>{{$wallet->coin}}</option>
                       @endforeach
                     </select>
-                    <input type="hidden" id="coinname" name="wallet" value={{$wallets[0]->name}}>
+                    <input type="hidden" id="coinname" name="wallet" value={{$wallets [0]->name}}>
                 </div>
 
                 <div class="form-group mb-3">
                   <label for="amount">Available Balance</label>
-                  <input type="number" name="balance" class="form-control" value={{$wallets[0]->balance}} id="balance" placeholder="Balance" disabled>
+                  <input type="number" name="balance" class="form-control" value={{$wallets [0]->balance}} id="balance" placeholder="Balance" disabled>
                 </div>
 
                 <br><br>
@@ -48,7 +48,7 @@
                   <div class="form-group mb-3">
                     <label for="amount">Wallet Type</label> 
                     <select name="newwallet" class="form-control">
-                      @foreach($wallets as $wallet)
+                      @foreach($wallets  as $wallet)
                       <option value={{$wallet->coin}}>{{$wallet->coin}}</option>
                       @endforeach
                     </select>

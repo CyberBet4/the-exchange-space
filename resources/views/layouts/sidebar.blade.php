@@ -30,17 +30,17 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/icons/mdi.html">
+          <a class="nav-link" href={{ route('transactions')}}>
             <span class="menu-title">Swap Transactions</span>
             <i class="mdi mdi-history menu-icon"></i>
           </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link" href="pages/forms/basic_elements.html">
             <span class="menu-title">KYC Verification</span>
             <i class="mdi mdi-account-check menu-icon"></i>
           </a>
-        </li>
+        </li> --}}
         
         <li class="nav-item sidebar-actions">
           <span class="nav-link">

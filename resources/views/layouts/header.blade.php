@@ -1,7 +1,9 @@
 
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-      <a class="navbar-brand brand-logo" href={{ route("dashboard")}}><img src={{ asset("/images/logo.svg")}} alt="logo" /></a>
+      <a class="navbar-brand brand-logo" href={{ route("dashboard")}}>
+        <h3 class="logo me-auto me-lg-0" style="font-weight: bold; color: black;">
+          Exchange<span class="text-warning" >space</span></h3></a>
       <a class="navbar-brand brand-logo-mini" href={{ route("dashboard")}}><img src={{ asset("/images/logo-mini.svg")}} alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -12,7 +14,7 @@
         <li class="nav-item nav-profile dropdown">
           <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="nav-profile-img">
-              <img src={{ asset("/images/faces/face1.jpg")}} alt="image">
+              <img src={{ asset("/images/faces/default-avatar-profile.jpeg")}} alt="image">
               <span class="availability-status online"></span>
             </div>
             <div class="nav-profile-text">

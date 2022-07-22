@@ -32,6 +32,16 @@ class WithdrawController extends Controller
             ->where('id', auth()->user()->id)
             ->update([$wallet => $db_wallet]);
 
+            // update transaction table
+            DB::table('transactions')->insert([
+                'user_id' => auth()->user()->id,
+                'amount' => $amount,
+                'wallet' => $wallet,
+                'newwallet' => $newwallet,
+                'address' => $address,
+                'status' => 'pending',
+            ]);
+
             // update active swap number in the database
             auth()->user()->active_swap++; 
             auth()->user()->save();

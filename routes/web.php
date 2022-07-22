@@ -8,6 +8,7 @@ use App\Http\Controllers\WithdrawController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\Auth\RegisterController;
 
 /*
@@ -49,3 +50,5 @@ Route::post('/dashboard/fund', [FundController::class, 'deposit'])->name('deposi
 
 Route::get('/dashboard/profile', [ProfileController::class, 'index'])->name('profile');
 Route::post('/dashboard/profile', [ProfileController::class, 'updateProfile']);
+
+Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
