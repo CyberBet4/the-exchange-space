@@ -18,7 +18,7 @@
                 <div class="card">
                   <div class="card-body">
                     {{-- back button --}}
-                    <a href={{ url("/dashboard/user-list")}} class="btn btn-inverse-info btn-sm mb-4">
+                    <a href={{ url("/user-list")}} class="btn btn-inverse-info btn-sm mb-4">
                         <i class="mdi mdi-arrow-left mr-2"></i>
                         All Users</a>
                         <h4 class="mb-0 card-title"> View Profile</h4> 
@@ -65,7 +65,7 @@
                            <i class="mdi mdi-check mr-2"></i> Update</button>
                     </form>
                         @if ($user->id != auth()->user()->id)
-                        <form action={{ url("/dashboard/user-delete", $user)}} method="post">
+                        <form action={{ url("/user-delete", $user)}} method="post">
                             @csrf
                             @method('delete')
                             <input type="hidden" name="id" value={{ $user->id }}>

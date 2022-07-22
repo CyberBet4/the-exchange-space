@@ -24,8 +24,8 @@
           </a>
           <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
-              <li class="nav-item"> <a class="nav-link" href="#">View Room</a></li>
-              <li class="nav-item"> <a class="nav-link" href="#">Join Room</a></li>
+              <li class="nav-item"> <a class="nav-link" href={{ route('swap-room') }}>View Room</a></li>
+              <li class="nav-item"> <a class="nav-link" href={{route('join-room')}}>Join Room</a></li>
             </ul>
           </div>
         </li>
@@ -41,6 +41,16 @@
             <i class="mdi mdi-account-check menu-icon"></i>
           </a>
         </li> --}}
+
+        {{-- {{dd(auth()->user()->is_admin);}} --}}
+        @if(auth()->user()->is_admin)
+        <li class="nav-item">
+          <a class="nav-link" href={{route("user-list")}}>
+            <span class="menu-title">User List</span>
+            <i class="mdi mdi-account-check menu-icon"></i>
+          </a>
+        </li>
+        @endif
         
         <li class="nav-item sidebar-actions">
           <span class="nav-link">

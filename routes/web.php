@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FundController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SwapRoomController;
 use App\Http\Controllers\UserlistController;
 use App\Http\Controllers\WithdrawController;
 use App\Http\Controllers\DashboardController;
@@ -38,10 +39,10 @@ Route::post('/register', [RegisterController::class, 'store']);
 // AUTHENTICATED ROUTES
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard/user-list', [UserlistController::class, 'index'])->name('user-list');
-Route::post('/dashboard/user-list', [UserlistController::class, 'update']);
-Route::get('/dashboard/user-list/{id}', [UserlistController::class, 'get_singleuser']);
-Route::delete('/dashboard/user-delete/{id}', [UserlistController::class, 'destroy'])->name('user-delete');
+Route::get('/user-list', [UserlistController::class, 'index'])->name('user-list');
+Route::post('/user-list', [UserlistController::class, 'update']);
+Route::get('/user-list/{id}', [UserlistController::class, 'get_singleuser']);
+Route::delete('/user-delete/{id}', [UserlistController::class, 'destroy'])->name('user-delete');
 
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 
@@ -52,3 +53,5 @@ Route::get('/dashboard/profile', [ProfileController::class, 'index'])->name('pro
 Route::post('/dashboard/profile', [ProfileController::class, 'updateProfile']);
 
 Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
+Route::get('swap-room', [SwapRoomController::class, 'index'])->name('swap-room');
+Route::get('swap-room/join', [SwapRoomController::class, 'joinRoom'])->name('join-room');

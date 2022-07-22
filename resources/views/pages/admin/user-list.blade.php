@@ -39,11 +39,11 @@
                                     <td> {{$user->email}} </td>
                                     <td class="address"> {{$user->address}} </td> 
                                     <td class="d-flex"> 
-                                        <a href={{ url("/dashboard/user-list", $user)}} class="btn btn-inverse-dark btn-sm mr-3">
+                                        <a href={{ url("/user-list", $user)}} class="btn btn-inverse-dark btn-sm mr-3">
                                          <i class="mdi mdi-eye mr-2"></i> View</a> 
                                     {{-- </form> --}}
                                     @if ($user->id != auth()->user()->id)
-                                        <form action={{ url("/dashboard/user-delete", $user)}} method="post">
+                                        <form action={{ url("/user-delete", $user)}} method="post">
                                             @csrf
                                             @method('delete')
                                             <input type="hidden" name="id" value={{ $user->id }}>
