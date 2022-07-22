@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\WithdrawRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class WithdrawController extends Controller
 {
@@ -12,6 +14,7 @@ class WithdrawController extends Controller
         
         // get wallet to be deducted from and external wallet to be sent to
 
+        $user = auth()->user();
         $amount = $request->amount; // amount to be withdrawn
         $wallet = $request->wallet; // wallet type
         $address = $request->address; // wallet address
@@ -32,6 +35,10 @@ class WithdrawController extends Controller
             // update active swap number in the database
             auth()->user()->active_swap++; 
             auth()->user()->save();
+
+            // notify admin of the withdrawal request
+            Mail::to($user->email)->send(new WithdrawRequest($user, $amount, $wallet, $newwallet, $address));
+
             // send the amount to the user's address and return success message
             return redirect()->route('dashboard')->with('success', "Your request has been sent and is been processed, you'll receive your funds within 5 mins.");
         }
