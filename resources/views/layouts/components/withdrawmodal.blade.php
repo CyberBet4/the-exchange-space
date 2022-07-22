@@ -22,12 +22,19 @@
 
                 <div class="form-group mb-3">
                     <label for="amount">Wallet Type</label> 
-                    <select name="wallet" class="form-control">
-                        <option value="trx">TRX</option>
-                        <option value="fwt">FWT</option>
-                        <option value="tpc">TPC</option>
+                    <select id="inner-wallet" class="form-control">
+                      @foreach($wallets as $wallet)
+                      <option id={{$wallet->name}} value={{$wallet->balance}}>{{$wallet->coin}}</option>
+                      @endforeach
                     </select>
+                    <input type="hidden" id="coinname" name="wallet" value={{$wallets[0]->name}}>
                 </div>
+
+                <div class="form-group mb-3">
+                  <label for="amount">Available Balance</label>
+                  <input type="number" name="balance" class="form-control" value={{$wallets[0]->balance}} id="balance" placeholder="Balance" disabled>
+                </div>
+
                 <br><br>
                 
                   <h6>To Another Wallet</h6>
@@ -35,18 +42,15 @@
                 
                   <div class="form-group mb-3">
                       <label for="amount">Enter wallet Address</label>
-                      <input type="text" name="w-address" class="form-control" placeholder="Enter wallet">
+                      <input type="text" name="address" class="form-control" placeholder="Enter wallet">
                   </div>
 
                   <div class="form-group mb-3">
                     <label for="amount">Wallet Type</label> 
-                    <select name="" class="form-control">
-                        <option value="btc">BTC</option>
-                        <option value="ltc">LTC</option>
-                        <option value="eth">ETH</option>
-                        <option value="eth">TRX</option>
-                        <option value="eth">FWT</option>
-                        <option value="eth">TPC</option>
+                    <select name="newwallet" class="form-control">
+                      @foreach($wallets as $wallet)
+                      <option value={{$wallet->coin}}>{{$wallet->coin}}</option>
+                      @endforeach
                     </select>
                 </div>
 
@@ -61,3 +65,13 @@
         </div>
       </div>
     {{-- end of withdraw modal --}}
+
+    <script>
+      document.getElementById('inner-wallet').onchange = function() {
+        var balance = document.getElementById('inner-wallet').value;
+        document.getElementById('balance').value = balance;
+        
+        let x = document.getElementById("inner-wallet");
+        document.getElementById('coinname').value = x.options[x.selectedIndex].id;
+      }
+    </script>

@@ -64,6 +64,7 @@ class UserlistController extends Controller
 
         // increase completed swaps value
         $user->completed_swap = $user->completed_swap + 1;
+        $user->active_swap = $user->active_swap - 1;; 
         if($user->save()){
             return redirect('dashboard/user-list/'.$request->id)->with('success', 'User updated successfully');
         }else{
