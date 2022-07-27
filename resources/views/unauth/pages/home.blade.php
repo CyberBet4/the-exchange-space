@@ -7,7 +7,7 @@
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
         <div class="col-xl-6 col-lg-8">
           <h3>It's time to Take Control of Your Cryptocurrency Transactions<span>!</span></h3>
-          <h2 class="mt-2"> Exchangespace is the Worlds most secure Cross Exchangespace DeFi platform allowing users to deploy crypto-based escrow smart contracts with no coding required.</h2>
+          <h2 class="mt-2"> Exchangespace is the Worlds most secure Cross Exchangespace DeFi platform allowing users to deploy crypto-based OTC service smart contracts with no coding required.</h2>
           <a class="btn btn-primary btn-lg mt-2" href={{url('/register')}}>Get Started</a>
         </div>
       </div>
@@ -86,9 +86,9 @@
           <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
           <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center">
-              <h3>All-In-One Bitcoin and Cryptocurrency Escrow Payment Solution</h3>
+              <h3>All-In-One Bitcoin and Cryptocurrency OTC service Payment Solution</h3>
               <p>
-                Exchangespace understands what people are looking for in a escrow payment system, first-rate security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We also included Private Chat, User Ratings and Instant Alerts, just to spice things up a bit.
+                Exchangespace understands what people are looking for in a OTC service payment system, first-rate security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We also included Private Chat, User Ratings and Instant Alerts, just to spice things up a bit.
               </p>
               <div>
                 <a href={{url('/register')}} class="btn btn-primary btn-lg mt-2 w-max-content">
@@ -105,9 +105,9 @@
           
           <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
             <div class="content d-flex flex-column justify-content-center mr-3">
-              <h3>Stay in total control with our Keyless Escrow Transaction System</h3>
+              <h3>Stay in total control with our Keyless OTC service Transaction System</h3>
               <p>
-                Exchangespace understands what people are looking for in a escrow payment system, first-rate security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We also included Private Chat, User Ratings and Instant Alerts, just to spice things up a bit.
+                Exchangespace understands what people are looking for in a OTC service payment system, first-rate security, ease of use, dispute resolution and quick disbursement of funds all while being fully compliant. We also included Private Chat, User Ratings and Instant Alerts, just to spice things up a bit.
               </p>
               <div>
                 <a href={{url('/register')}} class="btn btn-primary btn-lg mt-2 w-max-content">
@@ -130,9 +130,9 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>Why Cryptocurrency Escrow?</h3>
+          <h3>Why Cryptocurrency OTC service?</h3>
           <p> 
-            Buyers can rest knowing Xchange's proprietary Keyless Escrow system secures funds until you receive the item or service and are happy to release funds to the seller.
+            Buyers can rest knowing Xchange's proprietary Keyless OTC service system secures funds until you receive the item or service and are happy to release funds to the seller.
 
 Sellers never need to worry about shipping goods or providing a service when using Exchangespace. Once buyer funds have been received, seller is authorized to ship goods or provide service knowing funds are secure.
           </p>

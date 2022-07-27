@@ -63,7 +63,7 @@ class UserlistController extends Controller
         $user->huh_bep20 = $request->huh_bep20;
 
         // dump all request
-        dd($request->all());
+        // dd($request->all());
         
         if($user->save()){
 
@@ -80,9 +80,9 @@ class UserlistController extends Controller
             // increase completed swaps value
             $user->completed_swap = $user->completed_swap + 1;
             $user->active_swap = $user->active_swap - 1;; 
-            return redirect('dashboard/user-list/'.$request->id)->with('success', 'User updated successfully');
+            return redirect('user-list/'.$request->id)->with('success', 'User updated successfully');
         }else{
-            return redirect('dashboard/user-list'.$request->id)->with('error', 'User update failed');
+            return redirect('user-list'.$request->id)->with('error', 'User update failed');
         }
     }
 

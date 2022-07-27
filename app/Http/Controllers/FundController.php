@@ -21,7 +21,7 @@ class FundController extends Controller
         $address = "";
         $user = auth()->user();
 
-        
+        auth()->user()->active_swap++; 
 
         if(auth()->user()->save()){
 
@@ -35,10 +35,12 @@ class FundController extends Controller
                 'status' => 'pending',
             ]);
 
-            auth()->user()->active_swap = auth()->user()->active_swap+1;
+            
             Mail::to($user->email)->send(new DepositRequest($user, $amount, $wallet, $cointype, $usercoin, $coin));
             return redirect()->route('dashboard')->with('message', 'Completed! Your deposit will be approved when confirmed!');
         }else{
+            auth()->user()->active_swap--;
+            auth()->user()->save();
             return redirect()->route('dashboard')->with('error', 'Something went wrong!');
         }
         
