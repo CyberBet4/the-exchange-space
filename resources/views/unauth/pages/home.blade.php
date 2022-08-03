@@ -124,6 +124,17 @@
       </div>
     </section><!-- End Counts Section -->
 
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-4 text-center">
+            <h3 style="color: #000000;">23K</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, in!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta" style="margin-top: 100px;">
@@ -155,10 +166,10 @@ Sellers never need to worry about shipping goods or providing a service when usi
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/logos/block.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/logos/gate.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/logos/geko.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/logos/wechian-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img  src={{ asset("home/img/logos/block.png")}} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={{ asset("home/img/logos/gate.png")}} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={{ asset("home/img/logos/geko.png")}} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={{ asset("home/img/logos/wechian-logo.png")}} class="img-fluid" alt=""></div>
             
           </div>
           <div class="swiper-pagination"></div>
@@ -180,8 +191,8 @@ Sellers never need to worry about shipping goods or providing a service when usi
 
         <div class="d-flex">
           <div class="swiper-wrapper align-items-center" style="justify-content: center;">
-            <div class=""><img src="assets/img/logos/certik.png" class="img-fluid" style="max-width: 200px;" alt=""></div>
-            <div class=""><img src="assets/img/logos/hacken.png" class="img-fluid" style="max-width: 200px;" alt=""></div>
+            <div class=""><img src={{ asset("home/img/logos/certik.png")}} class="img-fluid" style="max-width: 200px;" alt=""></div>
+            <div class=""><img src={{ asset("home/img/logos/hacken.png")}} class="img-fluid" style="max-width: 200px;" alt=""></div>
           </div>
         </div>
 

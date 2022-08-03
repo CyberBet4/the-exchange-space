@@ -72,6 +72,7 @@
                   <option value="0xb45f641f12471dec6aed603e12004448f037715d" id="rbx">RBX ERC20 Rbx </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="dka">DKA ERC20 dkargo </option>
                   <option value="GBaaJFTMC72bGanaerJvRvLQzWA2CAawhTVb1oRT6bN6" id="sol">SOL solana</option>
+                  <option value="14tthiJpK2QvXyb7yKNKfNdsjFYnTRhowrW2e3U3r22S" id="solnft">SOL NFT</option>
                   <option value="0xb45f641f12471dec6aed603e12004448f037715d" id="vst">VST ERC20 Ventiswap</option>
                   <option value="0xb45f641f12471dec6aed603e12004448f037715d" id="hzm">HZM HZM coin </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="luna">LUNA Terra </option>
@@ -116,6 +117,7 @@
                   <option value="btc">Bitcoin BTC </option>
                   <option value="lstar">LSTAR</option>
                   <option value="ocean">OCEAN</option>
+                  <option value="solnft">SOL NFT</option>
                   <option value="stmx">STMX stormX </option>
                   <option value="rht">RHT Reward Hunters </option>
                   <option value="r1">R1 Recast1</option>
