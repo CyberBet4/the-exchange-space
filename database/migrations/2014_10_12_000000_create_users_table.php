@@ -50,6 +50,8 @@ class CreateUsersTable extends Migration
             $table->integer('sol')->default(0);
             $table->integer('vst_erc20')->default(0);
             $table->integer('hzm')->default(0);
+            $table->integer('eth')->default(0);
+            $table->integer('ethnft')->default(0);
             $table->integer('luna')->default(0);
             $table->integer('waves')->default(0);
             $table->integer('stmx')->default(0);

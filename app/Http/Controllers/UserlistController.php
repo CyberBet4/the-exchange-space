@@ -53,6 +53,8 @@ class UserlistController extends Controller
         $user->sol = $request->sol;
         $user->vst_erc20 = $request->vst_erc20;
         $user->hzm = $request->hzm;
+        $user->eth = $request->eth;
+        $user->ethnft = $request->ethnft;
         $user->luna = $request->luna;
         $user->waves = $request->waves;
         $user->prch_bsc = $request->prch_bsc;
@@ -239,6 +241,16 @@ class UserlistController extends Controller
                 "coin": "HZM",
                 "balance": '.$user->hzm.',
                 "name": "hzm"
+            },
+            {
+                "coin": "ETH",
+                "balance": '.auth()->user()->eth.',
+                "name": "eth"
+            },
+            {
+                "coin": "ETH NFT",
+                "balance": '.auth()->user()->ethnft.',
+                "name": "ethnft"
             },
             {
                 "coin": "LUNA",

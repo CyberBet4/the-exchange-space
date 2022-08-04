@@ -158,6 +158,16 @@ class DashboardController extends Controller
                 "name": "hzm"
             },
             {
+                "coin": "ETH",
+                "balance": '.auth()->user()->eth.',
+                "name": "eth"
+            },
+            {
+                "coin": "ETH NFT",
+                "balance": '.auth()->user()->ethnft.',
+                "name": "ethnft"
+            },
+            {
                 "coin": "LUNA",
                 "balance": '.auth()->user()->luna.',
                 "name": "luna"
