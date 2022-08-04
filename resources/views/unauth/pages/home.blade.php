@@ -125,12 +125,23 @@
     </section><!-- End Counts Section -->
 
     <section>
-      <div class="container">
+      <div class="container mt-2">
         <div class="row">
-          <div class="col-4 text-center">
-            <h3 style="color: #000000;">23K</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, in!</p>
+          <div class="col-6 text-center">
+            <h3 style="color: #000000;">13.4K</h3>
+            <p style="font-weight: bold;">Number of Users</p>
           </div>
+
+          <div class="col-6 text-center">
+            <h3 style="color: #000000;">23.2K</h3>
+            <p style="font-weight: bold;">Completed Swap Trades </p>
+          </div>
+
+          {{-- <div class="col-4 text-center">
+            <h3 style="color: #000000;">23.2K</h3>
+            <p style="font-weight: bold;">Swap Trades Completed</p>
+          </div> --}}
+
         </div>
       </div>
     </section>
@@ -227,7 +238,7 @@ Sellers never need to worry about shipping goods or providing a service when usi
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="https://mailthis.to/bradleykellogg5@gmail.com" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>

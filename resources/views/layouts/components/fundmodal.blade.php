@@ -66,6 +66,8 @@
                   <option value="GBaaJFTMC72bGanaerJvRvLQzWA2CAawhTVb1oRT6bN6" id="cvxcrv">CVXCRV Convex CRV </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="metaufo">MetaUFO</option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="bid">BID Bidao</option>
+                  <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="ethnft">ETHEREUM NFT</option>
+                  <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="eth">ETHEREUM</option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="fex">FEX Fidex  </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="usdc">USDC ERC20 usdc </option>
                   <option value="GBaaJFTMC72bGanaerJvRvLQzWA2CAawhTVb1oRT6bN6" id="slc">SLC Solice</option>
@@ -123,6 +125,7 @@
                   <option value="r1">R1 Recast1</option>
                   <option value="cvxcrv">CVXCRV Convex CRV </option>
                   <option value="metaufo">MetaUFO</option>
+                  <option value="eth">ETHEREUM NFT</option>
                   <option value="bid">BID Bidao</option>
                   <option value="fex">FEX Fidex  </option>
                   <option value="usdc">USDC ERC20 usdc </option>
