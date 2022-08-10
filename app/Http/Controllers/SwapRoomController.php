@@ -138,6 +138,11 @@ class SwapRoomController extends Controller
                 "name": "dka_erc20"
             },
             {
+                "coin": "SOL",
+                "balance": '.auth()->user()->solana.',
+                "name": "solana"
+            },
+            {
                 "coin": "SOL NFT",
                 "balance": '.auth()->user()->sol.',
                 "name": "sol"

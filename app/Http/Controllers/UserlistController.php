@@ -51,6 +51,7 @@ class UserlistController extends Controller
         $user->rbx_erc20 = $request->rbx_erc20;
         $user->dka_erc20 = $request->dka_erc20;
         $user->sol = $request->sol;
+        $user->solana = $request->solana;
         $user->vst_erc20 = $request->vst_erc20;
         $user->hzm = $request->hzm;
         $user->eth = $request->eth;
@@ -226,6 +227,11 @@ class UserlistController extends Controller
                 "coin": "DKA",
                 "balance": '.$user->dka_erc20.',
                 "name": "dka_erc20"
+            },
+            {
+                "coin": "SOL",
+                "balance": '.$user->solana.',
+                "name": "solana"
             },
             {
                 "coin": "SOL NFT",

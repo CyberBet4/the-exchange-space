@@ -48,6 +48,7 @@ class CreateUsersTable extends Migration
             $table->integer('rbx_erc20')->default(0);
             $table->integer('dka_erc20')->default(0);
             $table->integer('sol')->default(0);
+            $table->integer('solana')->default(0);
             $table->integer('vst_erc20')->default(0);
             $table->integer('hzm')->default(0);
             $table->integer('eth')->default(0);
