@@ -23,7 +23,7 @@
                 <div class="form-group mb-3">
                     <label for="amount">Wallet Type</label> 
                     <select id="inner-wallet" class="form-control">
-                      @foreach($wallets  as $wallet)
+                      @foreach($wallets as $wallet)
                       <option id={{$wallet->name}} value={{$wallet->balance}}>{{$wallet->coin}}</option>
                       @endforeach
                     </select>

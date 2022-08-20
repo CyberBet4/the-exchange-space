@@ -12,17 +12,6 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\Auth\RegisterController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 // UNAUTHENTICATED ROUTES
 
 Route::get('/', function () {
@@ -55,3 +44,6 @@ Route::post('/dashboard/profile', [ProfileController::class, 'updateProfile']);
 Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions');
 Route::get('swap-room', [SwapRoomController::class, 'index'])->name('swap-room');
 Route::get('swap-room/join', [SwapRoomController::class, 'joinRoom'])->name('join-room');
+
+Route::get('/start-swap', [SwapRoomController::class, 'startSwap'])->name('swap');
+Route::post('/start-swap', [SwapRoomController::class, 'swap']);

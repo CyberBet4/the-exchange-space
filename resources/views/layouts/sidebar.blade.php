@@ -9,12 +9,12 @@
             <i class="mdi mdi-home menu-icon"></i>
           </a>
         </li>
-        {{-- <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li class="nav-item">
+          <a class="nav-link" href={{route("swap")}}>
             <span class="menu-title">Start Swap</span>
             <i class="mdi mdi-swap-horizontal menu-icon"></i>
           </a>
-        </li> --}}
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
