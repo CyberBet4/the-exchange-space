@@ -83,6 +83,8 @@
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="arv-bep20">ARV BEP20 </option>
                   <option value="TMqCRFr9bX43zJxduUMZeYgXqEGUyehDVS" id="prch">PRCH BSC power cash </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="shib-bep20">SHIB BEP20 Shiba Inu </option>
+                  <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="avax">Avalanche AVAX </option>
+                  <option value="DTM2KY33A6GUO2D3OXKYX57MYFHIAILOOMBPNADW3BU3RGB5HYOG7H66VA" id="algo">Algorand  ALGO </option>
                 </select>
                 <input type="hidden" id="coinname" name="coinname" value="bnb">
               </div>
@@ -141,6 +143,8 @@
                   <option value="arv-bep20">ARV BEP20 </option>
                   <option value="prch">PRCH BSC power cash </option>
                   <option value="shib-bep20">SHIB BEP20 Shiba Inu </option>
+                  <option value="avax">Avalanche AVAX </option>
+                  <option value="algo">Algorand ALGO</option>
                 </select>
               </div>
             </div>

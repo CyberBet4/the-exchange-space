@@ -197,6 +197,16 @@ class SwapRoomController extends Controller
                 "coin": "HUH BEP20",
                 "balance": '.auth()->user()->huh_bep20.',
                 "name": "huh_bep20"
+            },
+            {
+                "coin": "Avalanche AVAX",
+                "balance": '.auth()->user()->avax.',
+                "name": "avax"
+            },
+            {
+                "coin": "Algorand ALGO",
+                "balance": '.auth()->user()->algo.',
+                "name": "algo"
             }
             
             
@@ -390,6 +400,16 @@ class SwapRoomController extends Controller
                 "coin": "HUH BEP20",
                 "balance": '.auth()->user()->huh_bep20.',
                 "name": "huh_bep20"
+            },
+            {
+                "coin": "Avalanche AVAX",
+                "balance": '.auth()->user()->avax.',
+                "name": "avax"
+            },
+            {
+                "coin": "Algorand ALGO",
+                "balance": '.auth()->user()->algo.',
+                "name": "algo"
             }
             
         ]');
@@ -580,6 +600,16 @@ class SwapRoomController extends Controller
                 "coin": "HUH BEP20",
                 "balance": '.auth()->user()->huh_bep20.',
                 "name": "huh_bep20"
+            },
+            {
+                "coin": "Avalanche AVAX",
+                "balance": '.auth()->user()->avax.',
+                "name": "avax"
+            },
+            {
+                "coin": "Algorand ALGO",
+                "balance": '.auth()->user()->algo.',
+                "name": "algo"
             }
             
         ]');

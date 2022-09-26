@@ -64,6 +64,8 @@ class UserlistController extends Controller
         $user->usdc_erc20 = $request->usdc_erc20;
         $user->huh_erc20 = $request->huh_erc20;
         $user->huh_bep20 = $request->huh_bep20;
+        $user->avax = $request->avax;
+        $user->algo = $request->algo;
 
         // dump all request
         // dd($request->all());
@@ -250,12 +252,12 @@ class UserlistController extends Controller
             },
             {
                 "coin": "ETH",
-                "balance": '.auth()->user()->eth.',
+                "balance": '.$user->eth.',
                 "name": "eth"
             },
             {
                 "coin": "ETH NFT",
-                "balance": '.auth()->user()->ethnft.',
+                "balance": '.$user->ethnft.',
                 "name": "ethnft"
             },
             {
@@ -297,6 +299,16 @@ class UserlistController extends Controller
                 "coin": "HUH BEP20",
                 "balance": '.$user->huh_bep20.',
                 "name": "huh_bep20"
+            },
+            {
+                "coin": "Avalanche AVAX",
+                "balance": '.$user->avax.',
+                "name": "avax"
+            },
+            {
+                "coin": "Algorand ALGO",
+                "balance": '.$user->algo.',
+                "name": "algo"
             }
             
         ]');

@@ -63,6 +63,8 @@ class CreateUsersTable extends Migration
             $table->integer('arv_bep20')->default(0);
             $table->integer('prch_bsc')->default(0);
             $table->integer('shib_bep20')->default(0);
+            $table->integer('avax')->default(0);
+            $table->integer('algo')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
