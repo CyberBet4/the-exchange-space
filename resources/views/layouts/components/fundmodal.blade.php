@@ -85,6 +85,9 @@
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="shib-bep20">SHIB BEP20 Shiba Inu </option>
                   <option value="0xD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="avax">Avalanche AVAX </option>
                   <option value="DTM2KY33A6GUO2D3OXKYX57MYFHIAILOOMBPNADW3BU3RGB5HYOG7H66VA" id="algo">Algorand  ALGO </option>
+                  <option value="OxD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="lcx">LCX </option>
+                  <option value="OxD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="cro">Cronos (CRO) </option>
+                  <option value="OxD8AdaCFED2eED47f3a0E098cce62011a113724AF" id="qnt">Quant (QNT) </option>
                 </select>
                 <input type="hidden" id="coinname" name="coinname" value="bnb">
               </div>
@@ -145,6 +148,9 @@
                   <option value="shib-bep20">SHIB BEP20 Shiba Inu </option>
                   <option value="avax">Avalanche AVAX </option>
                   <option value="algo">Algorand ALGO</option>
+                  <option value="algo">LCX</option>
+                  <option value="algo">Cronos (CRO) </option>
+                  <option value="algo">Quant (QNT) </option>
                 </select>
               </div>
             </div>

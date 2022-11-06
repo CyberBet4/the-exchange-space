@@ -66,6 +66,9 @@ class UserlistController extends Controller
         $user->huh_bep20 = $request->huh_bep20;
         $user->avax = $request->avax;
         $user->algo = $request->algo;
+        $user->lcx = $request->lcx;
+        $user->cro = $request->cro;
+        $user->qnt = $request->qnt;
 
         // dump all request
         // dd($request->all());
@@ -309,6 +312,21 @@ class UserlistController extends Controller
                 "coin": "Algorand ALGO",
                 "balance": '.$user->algo.',
                 "name": "algo"
+            },
+            {
+                "coin": "Lcx (LCX)",
+                "balance": '.$user->lcx.',
+                "name": "lcx"
+            },
+            {
+                "coin": "Cronos (CRO)",
+                "balance": '.$user->cro.',
+                "name": "cro"
+            },
+            {
+                "coin": "Quant (QNT)",
+                "balance": '.$user->qnt.',
+                "name": "qnt"
             }
             
         ]');

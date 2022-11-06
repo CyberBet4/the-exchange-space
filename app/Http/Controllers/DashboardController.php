@@ -221,6 +221,21 @@ class DashboardController extends Controller
                 "coin": "Algorand ALGO",
                 "balance": '.auth()->user()->algo.',
                 "name": "algo"
+            },
+            {
+                "coin": "Lcx (LCX)",
+                "balance": '.auth()->user()->lcx.',
+                "name": "lcx"
+            },
+            {
+                "coin": "Cronos (CRO)",
+                "balance": '.auth()->user()->cro.',
+                "name": "cro"
+            },
+            {
+                "coin": "Quant (QNT)",
+                "balance": '.auth()->user()->qnt.',
+                "name": "qnt"
             }
             
             
